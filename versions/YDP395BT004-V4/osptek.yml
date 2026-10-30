@@ -1,0 +1,10 @@
+id: YDP395BT004-V4
+category: displays
+size: "3.95"
+panel: tft
+resolution: 480x480
+interface: [rgb]
+driver: ST7701S
+touch: FT6336U
+outline: 83.85 x 83.85 x 3.27 mm
+active_area: 71.86 x 70.18 mm

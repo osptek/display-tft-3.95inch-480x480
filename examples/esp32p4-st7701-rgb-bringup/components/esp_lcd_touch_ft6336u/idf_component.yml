@@ -1,0 +1,7 @@
+dependencies:
+  espressif/esp_lcd_touch:
+    version: "^1.0.4"
+    public: true
+  idf: ">=4.4.2"
+description: Local FT6336U/FT6x36 touch driver (patched for P4 bringup)
+version: 1.0.8-local

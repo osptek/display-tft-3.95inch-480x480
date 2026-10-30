@@ -1,0 +1,10 @@
+id: YDP395B005-V4
+category: displays
+size: "3.95"
+panel: tft
+resolution: 480x480
+interface: [rgb]
+driver: ST7102
+touch: null
+outline: 74.66 x 76.54 mm
+active_area: 71.86 x 70.18 mm
