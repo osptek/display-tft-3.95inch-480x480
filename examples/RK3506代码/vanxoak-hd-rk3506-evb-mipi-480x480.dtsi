@@ -1,0 +1,177 @@
+#include <dt-bindings/display/drm_mipi_dsi.h>
+#include <dt-bindings/input/rk-input.h>
+#include <dt-bindings/suspend/rockchip-rk3506.h>
+
+/ {
+	vcc_mipi_pwren: vcc-mipi_pwren-regulator {
+		compatible = "regulator-fixed";
+		regulator-boot-on;
+		regulator-always-on;
+		regulator-name = "vcc_mipi_pwren";
+		enable-active-high;
+		gpio = <&gpio1 RK_PB0 GPIO_ACTIVE_HIGH>;
+		pinctrl-name = "default";
+		pinctrl-0 = <&mipi_pwren_gpio>;
+	};
+};
+
+&dsi {
+	status = "okay";
+	//rockchip,lane-rate = <1000>;
+	dsi_panel: panel@0 {
+		status = "okay";
+		compatible = "simple-panel-dsi";
+		reg = <0>;
+		backlight = <&backlight>;
+		// power-supply = <&vcc3v3_lcd_n>;
+		// reset-gpio = <&gpio1 RK_PB0 GPIO_ACTIVE_LOW>;
+		reset-delay-ms = <10>;
+		enable-delay-ms = <10>;
+		prepare-delay-ms = <10>;
+		unprepare-delay-ms = <10>;
+		disable-delay-ms = <60>;
+		//width-mm = <68>;
+		//height-mm = <121>;
+		dsi,flags = <(MIPI_DSI_MODE_VIDEO | MIPI_DSI_MODE_VIDEO_BURST |
+				  MIPI_DSI_MODE_LPM | MIPI_DSI_MODE_NO_EOT_PACKET)>;
+		dsi,format = <MIPI_DSI_FMT_RGB888>;
+		dsi,lanes  = <2>;
+
+                // 3.95-inch ST7102 (480x480)
+		panel-init-sequence = [
+			39 00 04 99 71 02 A2
+			39 00 04 99 71 02 A3
+			39 00 04 99 71 02 A4
+			39 00 08 B0 22 61 1E 61 2F 39 39
+			39 00 03 B7 46 46
+			39 00 03 BF 50 50
+			39 00 07 D7 00 0C 80 08 F0 F0
+			39 00 21 A3 40 03 80 00 44 00 00 00 00 04 6F 6F 00 1A 00 45 05 00 00 00 00 46 00 00 12 20 52 00 05 00 00 FF
+			39 00 2D A6 08 00 24 55 35 00 76 40 58 58 00 24 55 00 00 40 40 58 58 02 AC 51 00 CC 40 40 58 58 00 AC 11 00 00 40 40 58 58 00 00 06 00 00 00 00
+			39 00 31 A7 19 19 00 64 40 07 16 40 00 44 43 58 58 00 64 40 25 34 00 00 42 41 58 58 00 64 40 4B 5A 00 00 42 41 58 58 00 24 40 69 78 00 00 40 40 58 58 00 44
+			39 00 26 AC 00 1C 04 1A 19 1B 1B 18 06 13 19 11 1B 08 18 0A 01 1C 04 1A 19 01 1B 18 06 12 19 10 1B 09 18 0B BF AA BF AA 00
+			39 00 08 AD CC 40 46 11 04 6F 6F
+			39 00 0F E8 30 07 05 74 74 9C 00 E2 04 00 00 00 00 EF
+			39 00 03 75 03 04
+			39 00 22 E7 8B 3C 00 0C F0 5D 00 5D 00 5D 00 5D 00 FF 00 08 7B 00 00 C8 6A 5A 08 1A 3C 00 A1 01 8C 01 7F F0 22
+			39 00 0A E9 3C 7F 08 07 1A 7A 22 1A 33
+			39 00 26 C8 00 00 15 26 44 00 78 03 BE 06 11 1C 09 8A 03 21 D4 01 11 0F 22 4A 0F 8F 0A 32 F0 0A 41 0D F3 80 0D AE C5 03 C4
+			39 00 26 C9 00 00 15 26 44 00 78 03 BE 06 11 1C 09 8A 03 21 D4 01 11 0F 22 4A 0F 8F 0A 32 F0 0A 41 0D F3 80 0D AE C5 03 C4
+			05 78 01 11
+			05 14 01 29
+		];
+
+		disp_timings0: display-timings {
+			native-mode = <&dsi_timing0>;
+			dsi_timing0: timing0 {
+				clock-frequency = <30800000>;//60fps
+
+				hactive = <480>;
+				vactive = <480>;
+
+				vsync-len = <4>;
+				vback-porch = <8>;
+				vfront-porch = <200>;
+
+				hsync-len = <2>;
+				hback-porch = <140>;
+				hfront-porch = <120>;
+
+				vsync-active = <0>;
+				hsync-active = <0>;
+				de-active = <0>;
+				pixelclk-active = <0>;
+			};
+		};
+
+		ports {
+			#address-cells = <1>;
+			#size-cells = <0>;
+
+			port@0 {
+				reg = <0>;
+				panel_in_dsi: endpoint {
+					remote-endpoint = <&dsi_out_panel>;
+					status = "okay";
+				};
+			};
+		};
+	};
+
+	ports {
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+		port@1 {
+			reg = <1>;
+			dsi_out_panel: endpoint {
+				remote-endpoint = <&panel_in_dsi>;
+			};
+		};
+	};
+};
+
+&display_subsystem {
+	status = "okay";
+	logo-memory-region = <&drm_logo>;
+};
+
+&vop {
+	status = "okay";
+};
+
+&dsi_in_vop {
+	status = "okay";
+};
+
+&rgb_in_vop {
+	status = "disabled";
+};
+
+&route_dsi {
+	status = "okay";
+	//logo,rotate = <3>;
+};
+
+&route_rgb {
+	status = "disabled";
+};
+
+&dsi_dphy {
+	status = "okay";
+};
+
+&backlight {
+	compatible = "pwm-backlight";
+	pwms = <&pwm0_4ch_2 0 10000 0>;
+	status = "okay";
+};
+
+// TOUCH
+&i2c2 {
+	status = "okay";
+	pinctrl-0 = <&rm_io4_i2c2_scl &rm_io5_i2c2_sda>;
+
+        st7123: st7123@55 {
+		status = "okay";
+		compatible = "sitronix,st7123";  /* 匹配 st7123_of_match */
+		reg = <0x55>;                     /* I2C 设备地址 */
+		pinctrl-names = "default";
+
+		touchscreen-size-x = <480>;       /* 匹配 3.95 寸 ST7102 分辨率 */
+		touchscreen-size-y = <480>;
+
+		/* 坐标翻转/镜像（按需开启） */
+		// touchscreen-inverted-x;
+		// touchscreen-inverted-y;
+		// touchscreen-swapped-x-y;
+	};
+};
+
+&pinctrl {
+	mipi_lcd{
+		mipi_pwren_gpio: mipi_pwren_gpio {
+			rockchip,pins = <1 RK_PB0 RK_FUNC_GPIO &pcfg_pull_none>;
+		};
+	};
+};

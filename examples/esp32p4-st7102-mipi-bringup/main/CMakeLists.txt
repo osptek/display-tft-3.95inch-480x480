@@ -1,0 +1,10 @@
+idf_component_register(
+    SRCS
+        "main.c"
+        "modbus_port/modbus_port.c"
+        "modbus_ui/modbus_ui.c"
+    INCLUDE_DIRS
+        "."
+        "modbus_port"
+        "modbus_ui"
+)
