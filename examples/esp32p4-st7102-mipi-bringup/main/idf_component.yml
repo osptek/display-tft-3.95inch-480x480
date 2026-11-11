@@ -1,0 +1,16 @@
+dependencies:
+  ## Required IDF version
+  idf:
+    version: '>=4.1.0'
+  espressif/esp_lvgl_port:
+    version: 2.7.*
+    public: true
+  lvgl/lvgl:
+    version: 9.4.*
+    public: true
+  espressif/esp_lcd_touch_st7123:
+    version: 1.0.*
+    public: true
+  espressif/esp-modbus:
+    version: "^2.1.0"
+    public: true

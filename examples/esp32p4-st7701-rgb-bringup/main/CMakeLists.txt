@@ -1,0 +1,18 @@
+idf_component_register(
+    SRCS
+        "main.c"
+        "app_init/app_init.c"
+        "lvgl_port/lvgl_port.c"
+    INCLUDE_DIRS
+        "."
+        "app_init"
+        "lvgl_port"
+    REQUIRES
+        driver
+        esp_mm
+        esp_lcd
+        esp_lcd_st7701
+        esp_lcd_touch_ft6336u
+        esp_lcd_panel_io_additions
+        lvgl
+)

@@ -1,0 +1,20 @@
+# ESP-IDF build
+build/
+sdkconfig.old
+sdkconfig.ci
+
+# Component manager (regenerated from idf_component.yml)
+managed_components/
+
+# IDE / tooling
+.vscode/
+.cache/
+.clangd
+*.pyc
+__pycache__/
+
+# OS
+.DS_Store
+Thumbs.db
+
+/reference/

@@ -1,0 +1,19 @@
+# ESP-IDF build
+/build/
+/managed_components/
+sdkconfig.old
+sdkconfig.ci
+
+# IDE / tooling
+/.vscode/
+/.cache/
+/.codex/
+.clangd
+*.pyc
+__pycache__/
+
+# OS
+.DS_Store
+Thumbs.db
+
+/reference/
