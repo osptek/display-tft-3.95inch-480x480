@@ -40,7 +40,7 @@
 | YDP395B005-V4 | <img alt="YDP395B005-V4" src="./versions/YDP395B005-V4/images/recommend-optimized.png" width="120" /> | ST7102 | ST7102 | RGB | [完整资料](./versions/YDP395B005-V4/) |
 | YDP395BT004-V4 | <img alt="YDP395BT004-V4" src="./versions/YDP395BT004-V4/images/recommend-optimized%20%281%29.png" width="120" /> | ST7701S | FT6336U | RGB | [完整资料](./versions/YDP395BT004-V4/) |
 | YDP395BT008-V1 | <img alt="YDP395BT008-V1" src="./versions/YDP395BT008-V1/images/product.png" width="120" /> | ST7102 | ST7102 | MIPI | [完整资料](./versions/YDP395BT008-V1/) |
-| YDP395BT009-V1 | <img alt="YDP395BT009-V1" src="./versions/YDP395BT009-V1/images/product.png" width="120" /> | ST7701S | FT6336U | RGB | [完整资料](./versions/YDP395BT009-V1/) |
+| YDP395BT009-V1 | <img alt="YDP395BT009-V1" src="./versions/YDP395BT009-V1/images/png-1.png" width="120" /> | ST7701S | FT6336U | RGB | [完整资料](./versions/YDP395BT009-V1/) |
 
 ---
 
