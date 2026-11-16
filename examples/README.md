@@ -24,6 +24,7 @@ They are reference code; adjust pins, backlight, touch and other settings to you
 | [`esp32p4-idf6-st7102-mipi-lvgl9-lvgl-adapter-te`](./esp32p4-idf6-st7102-mipi-lvgl9-lvgl-adapter-te/) | ESP32-P4 · ESP-IDF 6 | ST7102 | MIPI | LVGL 9、TE 防撕裂 / LVGL 9, TE tear-free |
 | [`esp32p4-idf6-st7102-mipi-lvgl9-lvgl-port`](./esp32p4-idf6-st7102-mipi-lvgl9-lvgl-port/) | ESP32-P4 · ESP-IDF 6 | ST7102 | MIPI | LVGL 9 / LVGL 9 |
 | [`esp32p4-st7102-mipi-bringup`](./esp32p4-st7102-mipi-bringup/) | ESP32-P4 | ST7102 + ST7123 | MIPI | 点屏测试、LVGL 9、触摸、Modbus UI / bring-up test, LVGL 9, touch, Modbus UI |
+| [`esp32p4-idf6_st7102-mipi-480x480_osptek-boot-anim_lvgl9`](./esp32p4-idf6_st7102-mipi-480x480_osptek-boot-anim_lvgl9/) | ESP32-P4 | ST7102 + ST7123 | MIPI | 点屏测试 / 开机动画+防撕裂+lvgl9 / Boot animation + anti-tearing + LVGL 9 |
 | [`esp32p4-st7701-rgb-bringup`](./esp32p4-st7701-rgb-bringup/) | ESP32-P4 | ST7701 + FT6336U | RGB | 点屏测试、LVGL 9、触摸 / bring-up test, LVGL 9, touch |
 | [`esp32s3-st7701-rgb-bringup`](./esp32s3-st7701-rgb-bringup/) | ESP32-S3 | ST7701 | RGB | 点屏测试 / bring-up test |
 | [`esp32s3-idf5_st7701-rgb_osptek-boot-anim_lvgl9`](./esp32s3-idf5_st7701-rgb_osptek-boot-anim_lvgl9/) | ESP32-S3 | ST7701 | RGB | 点屏测试 / 开机动画+防撕裂+lvgl9 / Boot animation + anti-tearing + LVGL 9 |
