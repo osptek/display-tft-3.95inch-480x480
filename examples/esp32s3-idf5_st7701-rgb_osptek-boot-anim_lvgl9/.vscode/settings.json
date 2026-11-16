@@ -1,0 +1,17 @@
+{
+    "idf.openOcdConfigs": [
+        "board/esp32s3-builtin.cfg"
+    ],
+    "idf.customExtraVars": {
+        "IDF_TARGET": "esp32s3"
+    },
+    "clangd.path": "/home/jin/.espressif/tools/esp-clang/esp-19.1.2_20250312/esp-clang/bin/clangd",
+    "clangd.arguments": [
+      "--background-index",
+      "--query-driver=**",
+      "--compile-commands-dir=/home/jin/Projects/esp32s3-idf5_st7701-rgb_osptek-boot-anim_lvgl9/build"
+    ],
+    "idf.flashType": "UART",
+    "idf.port": "/dev/ttyUSB0",
+    "idf.currentSetup": "/home/jin/.espressif/v5.5.5/esp-idf"
+}
