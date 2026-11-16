@@ -12,7 +12,7 @@
   <img alt="Touch: FT6336U" src="https://img.shields.io/badge/Touch-FT6336U-F39C12?style=flat-square" />
 </p>
 
-<p align="center"><img alt="OSPTEK 3.95&quot; 480×480 TFT module product image" src="./images/product.png" width="640" /></p>
+<p align="center"><img alt="OSPTEK 3.95&quot; 480×480 TFT module product image" src="./images/png-1.png" width="640" /></p>
 
 ## Contents
 

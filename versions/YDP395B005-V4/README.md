@@ -12,7 +12,7 @@
   <img alt="Touch: ST7102" src="https://img.shields.io/badge/Touch-ST7102-F39C12?style=flat-square" />
 </p>
 
-<p align="center"><img alt="OSPTEK 3.95 寸 480×480 TFT 模组宣传图" src="./images/product.png" width="640" /></p>
+<p align="center"><img alt="OSPTEK 3.95 寸 480×480 TFT 模组宣传图" src="./images/recommend-optimized.png" width="640" /></p>
 
 ## 目录
 
