@@ -26,7 +26,7 @@ They are reference code; adjust pins, backlight, touch and other settings to you
 | [`esp32p4-st7102-mipi-bringup`](./esp32p4-st7102-mipi-bringup/) | ESP32-P4 | ST7102 + ST7123 | MIPI | 点屏测试、LVGL 9、触摸、Modbus UI / bring-up test, LVGL 9, touch, Modbus UI |
 | [`esp32p4-st7701-rgb-bringup`](./esp32p4-st7701-rgb-bringup/) | ESP32-P4 | ST7701 + FT6336U | RGB | 点屏测试、LVGL 9、触摸 / bring-up test, LVGL 9, touch |
 | [`esp32s3-st7701-rgb-bringup`](./esp32s3-st7701-rgb-bringup/) | ESP32-S3 | ST7701 | RGB | 点屏测试 / bring-up test |
-| [`esp32s3-idf5_st7701-rgb_osptek-boot-anim_lvgl9`](./esp32s3-idf5_st7701-rgb_osptek-boot-anim_lvgl9/) | ESP32-S3 | ST7701 | RGB | 点屏测试 / 开机动画+防撕裂+lvgl9 |
+| [`esp32s3-idf5_st7701-rgb_osptek-boot-anim_lvgl9`](./esp32s3-idf5_st7701-rgb_osptek-boot-anim_lvgl9/) | ESP32-S3 | ST7701 | RGB | 点屏测试 / 开机动画+防撕裂+lvgl9 / Boot animation + anti-tearing + LVGL 9 |
 | [`rk3506-buildroot-st7102-mipi-480x480`](./rk3506-buildroot-st7102-mipi-480x480/) | RK3506 · buildroot | ST7123 | MIPI | 设备树与触摸驱动 / device tree, touch driver |
 | [`rpi5-lvgl-st7102-st7123-480x480`](./rpi5-lvgl-st7102-st7123-480x480/) | Raspberry Pi 5 | ST7102 + ST7123 | MIPI | LVGL、触摸 / LVGL, touch |
 | [`rpi5-panel-st7102-480x480`](./rpi5-panel-st7102-480x480/) | Raspberry Pi 5 | ST7102 | MIPI | 面板驱动 / panel driver |
